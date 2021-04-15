@@ -18,21 +18,21 @@ Since the BFS guarantees the shortest path, we just need to back track from the 
 the parents to find the exact path. The BFS algorithm also keeps track of distance from the start node so
 we just need to include that number in our output.
 
-Fail states: step size is too large (greater than or equal to n)
+Fail states: step size is too large (greater than or equal to n), step size <= 0 or we go out of bound
 
 
 Question 1b
-
+It is a comma seperated file with the following properties:
 coordinate: location on the Alice Map, where the bottom left corner is (0,0)
 status: white, grey or black
-parent: parent vertex
+parent: parent vertex, default at None
 type: red, yellow, start, goal, or ''
 distance: distance from the start
-{neighbours}: this is a key value pairing where the key is a step size, and the values are coordinates
-            of the neighbours corresponding to that step size.
+neighbours: a string that is delimited by the |, the pseudo list contains vectors that point
+to its neighbours.
 
 It would look like a .txt file with each row looking like the following:
 
-[coordinate, status, parent, type, distance, {neighbours}]
+[coordinate, type, neighbours, parent, status, distance]
 
 
