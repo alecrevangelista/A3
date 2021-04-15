@@ -1,0 +1,38 @@
+Question 1a
+
+Initialize the step size to 1.
+
+The first step is to find the square root of the total number of lines/inputs in the txt file (all nodes in the graph);
+call this number n. This will be used to create n - 1 adjacency lists (Python Dictionaries) for varying step sizes
+(ranging from 1 to n - 1). We will not be considering step sizes of value greater than or equal to n
+because doing so will result in stepping outside the bounds of the Alice Map.
+
+In order to calculate the adjacent vertices for each vertex in the adjacency lists, we will apply the
+following formula: vertex_coordinates + (vertex_vector * step_size)
+
+Then from here, we apply the BFS algorithm starting at the starting point we determined in the very
+beginning. Upon reaching a vertex that is "red" or "yellow", we will adjust the step size accordingly.
+Then depending on the step size, we will consult the corresponding adjacency list to find the next vertex.
+
+Since the BFS guarantees the shortest path, we just need to back track from the final vertex by revisiting
+the parents to find the exact path. The BFS algorithm also keeps track of distance from the start node so
+we just need to include that number in our output.
+
+Fail states: step size is too large (greater than or equal to n)
+
+
+Question 1b
+
+coordinate: location on the Alice Map, where the bottom left corner is (0,0)
+status: white, grey or black
+parent: parent vertex
+type: red, yellow, start, goal, or ''
+distance: distance from the start
+{neighbours}: this is a key value pairing where the key is a step size, and the values are coordinates
+            of the neighbours corresponding to that step size.
+
+It would look like a .txt file with each row looking like the following:
+
+[coordinate, status, parent, type, distance, {neighbours}]
+
+

@@ -1,0 +1,9 @@
+0.0,START,0.1|1.0,None,grey,0
+1.0,,1.0,None,white,0
+2.0,,0.1,None,white,0
+0.1,,0.1,None,white,0
+1.1,,0.1,None,white,0
+2.1,,-1.-1,None,white,0
+0.2,RED,0.-1|1.-1|1.0,None,white,0
+1.2,GOAL,,None,white,0
+2.2,YELLOW,-1.-1,None,white,0

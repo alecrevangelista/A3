@@ -1,0 +1,26 @@
+1,white,None,red,0,2,4,5
+2,white,None,,999,1
+3,white,None,start,999,2,6
+4,white,None,goal,999
+5,white,None,,999,4
+6,white,None,,999,9
+7,white,None,yellow,999,5
+8,white,None,,999,6
+9,white,None,,999,8
+
+
+ -- {1: (1,0), (0,1), 2: (0,2), (2,0)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
